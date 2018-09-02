@@ -21,6 +21,7 @@ $.getJSON( "./app/data/items.json", function(data) {
 
 _.forIn(data,function(i,e){
   $('.collapsible').append(linkTpl({"title":e}))
+  $('#slide-out').append('<li><a id="sid'+e+'" class="waves-effect infoLink" href="#!">'+_.startCase(e)+'</a></li>')
 })
 
 $('.infoLink').click(function(event) {
@@ -37,7 +38,7 @@ console.log( "complete" );
 });
 
 
-  //  $('.sidenav').sidenav();
+   $('.sidenav').sidenav();
     $('.collapsible').collapsible();
   });
 
