@@ -29,11 +29,11 @@
 .lnkRow{
 cursor: pointer;
 }
-.lnkText{
-}
+.lnkText{color: #607D8B;}
 
 .lnkIcn{
   float: right;
+  color: #607D8B;
 }
 
 .mlr30{
@@ -51,8 +51,8 @@ cursor: pointer;
     box-shadow: 0 0 10px #000;
     text-align: center;
     font-size: 50px;
-    color: rgba(66, 66, 66, 0.12);
-    background: rgba(191, 191, 191, 0.42);
+    color: #607D8B;
+    background: rgba(208, 208, 208, 0.61);
     z-index: 9999;
     display:none;
 }
@@ -60,4 +60,17 @@ cursor: pointer;
 .homeIcn {
     font-size: 32px;
     line-height: 2;
+}
+
+
+nav {
+    color: #fff;
+    background-color: #607D8B;
+}
+
+.page-footer {
+    background-color: #607D8B;
+    padding-top: 0;
+    box-shadow:  0 0 6px black;
+    text-align: center;
 }
