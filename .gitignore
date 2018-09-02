@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules/
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# stylus
+app/stylus/
+.styl
+
+# css
+app/css/styles.css
+
+/server.cmd
+npm-debug\.log
