@@ -10,7 +10,7 @@ $(document).ready(function(){
 
   scrollTop('#app')
 
-$.getJSON( "./app/data/items.json", function(data) {
+$.getJSON( "./app/data/questions.json", function(data) {
   //console.log(JSON.stringify(data))
 
 
@@ -21,7 +21,7 @@ $.getJSON( "./app/data/items.json", function(data) {
 
 _.forIn(data,function(i,e){
   $('.collapsible').append(linkTpl({"title":e}))
-  $('#slide-out').append('<li><a id="sid'+e+'" class="waves-effect infoLink" href="#!">'+_.startCase(e)+'</a></li>')
+  $('.sdQuestions').after('<li><a id="sid'+e+'" class="waves-effect infoLink" href="#!">'+_.startCase(e)+'</a></li>')
 })
 
 $('.infoLink').click(function(event) {
