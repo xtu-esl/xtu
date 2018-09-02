@@ -56,3 +56,8 @@ cursor: pointer;
     z-index: 9999;
     display:none;
 }
+
+.homeIcn {
+    font-size: 32px;
+    line-height: 2;
+}
