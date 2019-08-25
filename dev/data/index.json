@@ -1,0 +1,7 @@
+{
+  "debates": ["general"],
+  "techniques": ["abbreviation", "Homographs", "homonyms", "homophones", "idiom", "jargon", "onomatopoeia", "simile", "slang"],
+  "questions": ["AccidentsAtHome", "adoption", "advertising", "Advice", "Age", "Airplanes", "AmusementParks", "Anger", "AnimalsAndPets", "AnnoyingThings", "Arguing", "Art", "BagsAndPurses", "Beach", "Beauty", "Behavior", "Birthdays", "BooksAndReading", "Business", "CarsAndDriving", "Celebrities", "Change", "Charity", "Childhood", "Children", "Chores", "Cities", "Colors", "Community", "Commuting", "Complaining", "Computers", "Conflict", "Conversation", "Corruption", "Countries", "Creativity", "Crime", "Culture", "Dangers", "Dating", "Death", "Diets", "Entertainment", "EnvironmentAndPollution", "Family", "Fashion", "Favorites", "Fears", "Trends", "UniversityAndCollege"],
+  "roleplays": ["roleplayBeginner"],
+  "tests": []
+}

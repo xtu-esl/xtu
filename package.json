@@ -11,5 +11,14 @@
   "license": "ISC",
   "devDependencies": {
     "node-static": "^0.7.10"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.4",
+    "html-minifier": "^4.0.0",
+    "i": "^0.3.6",
+    "lodash": "^4.17.15",
+    "npm": "^6.11.2",
+    "uglify-es": "^3.3.9"
   }
 }

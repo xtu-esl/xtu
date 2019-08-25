@@ -1,0 +1,107 @@
+body{
+  color: #fff;
+  background-color: #363636;
+}
+
+nav {
+    color: #3F51B5;
+    background-color: #212121;
+}
+
+.collapsible {
+    border-top: 1px solid #212121;
+    border-right: 1px solid #212121;
+    border-left: 1px solid #212121;
+    color: #3F51B5;
+}
+
+.collapsible-header {
+    background-color: #212121;
+    border-bottom: 1px solid #212121;
+}
+
+.collapsible-body {
+    border-bottom: 1px solid #363636;
+}
+
+.collection {
+    border: 1px solid #212121;
+}
+
+.collection.with-header .collection-header {
+    background-color: #212121;
+    border-bottom: 1px solid #363636;
+}
+
+.collection .collection-item {
+    background-color: #212121;
+    border-bottom: 1px solid #363636;
+}
+
+.lnkText,.lnkIcn {
+    color: #3F51B5;
+}
+
+.sidenav {
+    background: rgba(10, 10, 10, 0.51);
+    color: #3F51B5;
+}
+
+.divider {
+    background-color: #363636;
+}
+
+.page-footer {
+    background-color: #212121;
+
+}
+
+.page-footer .footer-copyright, nav ul a, .sidenav li>a  {
+    color: #3F51B5;
+}
+
+.abtn{
+  background: #3F51B5;
+  box-shadow: 0 0 6px #3F51B5;
+}
+
+.abtn:hover{
+  background: #4F51B5;
+}
+
+.card {
+    background-color: #363636;
+}
+
+.modal .modal-footer {
+    background-color: transparent;
+    color: #fff;
+}
+
+.modal, .bcCard {
+  background-color: #212121;
+}
+
+.bcCard {
+  box-shadow: 0 0 4px #212121;
+}
+
+.bcCard a, .bcCard a:before, .bcCard a:last-child{
+  color: #fff;
+}
+
+textarea.materialize-textarea {
+  color: #fff;
+}
+
+.btn{
+  background-color: #363636;
+}
+
+.btn:hover, .btn:focus, .btn:active{
+  background-color: #212121;
+}
+
+#prfscrMsgWindow {
+    background: #363636!important;
+}
