@@ -14,9 +14,9 @@ const files = {
     "./dev/html/electron.html"
   ],
   "css": [
-    "./dev/css/materialize.css",
-    "./dev/css/styles.css",
-    "./dev/css/dark.css",
+    "./dev/css/materialize.min.css",
+    "./dev/css/styles.min.css",
+    "./dev/css/dark.min.css",
   ],
   "js": {
     "vendor": [
@@ -53,19 +53,19 @@ const minify = {
       fs.readFile(files.css[1], 'utf8', function(err,res){
         if(err){return cl(err)};
         str += res;
-        fs.writeFile('./app/css/styles.css', min.minCSS(str), function(err, res){
+        fs.writeFile('./app/css/styles.min.css', min.minCSS(str), function(err, res){
           if(err){return cl(err)};
           cl(path.basename(files.css[0]) +' minified')
-          gz('./app/css/styles.css');
+          gz('./app/css/styles.min.css');
         })
       })
     })
     fs.readFile(files.css[2], 'utf8', function(err,res){
       if(err){return cl(err)};
-      fs.writeFile('./app/css/dark.css', min.minCSS(res), function(err, res){
+      fs.writeFile('./app/css/dark.min.css', min.minCSS(res), function(err, res){
         if(err){return cl(err)};
         cl(path.basename(files.css[2]) +' minified')
-        gz('./app/css/dark.css');
+        gz('./app/css/dark.min.css');
       })
     })
   },
@@ -129,8 +129,8 @@ const minify = {
 }
 
 
-//minify.minCSS()
-minify.minJS();
-//minify.minHTML()
+minify.minCSS()
+//minify.minJS();
+minify.minHTML()
 //minify.gzipDownloads()
 //minify.minJSON()

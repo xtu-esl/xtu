@@ -557,7 +557,6 @@ function initChat(){
     cache: true,
     success: function(i){
       cl('starting chat service...');
-      cl(i)
     },
     error: function(){
       cl('chat service error.')
