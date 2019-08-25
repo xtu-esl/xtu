@@ -213,8 +213,9 @@ function checktransHis(i, cb){
       if(_.isUndefined(res)){
         return cb(true, null);
       }
-      cb(false, res.cn)
+      return cb(false, res.cn);
     }
+    return cb(true, null);
   } catch (err) {
     if(err){return cb(true, null);}
   }

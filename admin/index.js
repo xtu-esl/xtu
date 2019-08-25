@@ -82,13 +82,13 @@ const minify = {
       })
       _.forEach(files.js.app, function(i){
         try {
-          str2 += fs.readFileSync(i, 'utf8')
+          str2 += fs.readFileSync(i, 'utf8');
         } catch (err) {
           if(err){return cl(err)};
         }
       })
-      str += min.minJS(str2).code;
-      fs.writeFileSync('./app/js/app.js', str);
+      cl(str2)
+      fs.writeFileSync('./app/js/app.js', str + min.minJS(str2).code);
       cl('app.js created')
       gz('./app/js/app.js');
       str = '';
@@ -130,7 +130,7 @@ const minify = {
 
 
 //minify.minCSS()
-//minify.minJS()
+minify.minJS();
 //minify.minHTML()
 //minify.gzipDownloads()
-minify.minJSON()
+//minify.minJSON()
