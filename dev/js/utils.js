@@ -551,13 +551,16 @@ function getData(){
 }
 
 function initChat(){
-  return;
   $.ajax({
     url: './app/js/chat.js',
     dataType: "script",
     cache: true,
-    success: function(){
-      cl('starting chat service...')
+    success: function(i){
+      cl('starting chat service...');
+      cl(i)
+    },
+    error: function(){
+      cl('chat service error.')
     }
   });
 }
