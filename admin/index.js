@@ -116,7 +116,7 @@ const minify = {
   },
   gzipAudio: function(){
 
-    glob("./app/audio/**/**", function (err, items) {
+    glob("./app/audio/**/*.*", function (err, items) {
       _.forEach(items, function(e){
         gz(e);
       })
@@ -141,7 +141,7 @@ const minify = {
 
 //minify.minCSS()
 //minify.minJS();
-minify.gzipAudio()
+//minify.gzipAudio()
 //minify.minHTML()
 //minify.gzipDownloads()
 //minify.minJSON()
