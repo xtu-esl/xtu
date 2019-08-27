@@ -23,7 +23,8 @@ const files = {
       "./dev/js/lodash.js",
       "./dev/js/jquery.js",
       "./dev/js/materialize.js",
-      "./dev/js/wow.js"
+      "./dev/js/wow.js",
+      "./dev/js/tag.js"
     ],
     "app": [
       "./dev/js/tpl.js",
@@ -113,6 +114,15 @@ const minify = {
       })
     })
   },
+  gzipAudio: function(){
+
+    glob("./app/audio/**/**", function (err, items) {
+      _.forEach(items, function(e){
+        gz(e);
+      })
+    })
+
+  },
   minJSON: function(){
     glob("./app/**/*.json", function (err, items) {
       _.forEach(items, function(i){
@@ -129,8 +139,9 @@ const minify = {
 }
 
 
-minify.minCSS()
+//minify.minCSS()
 //minify.minJS();
-minify.minHTML()
+minify.gzipAudio()
+//minify.minHTML()
 //minify.gzipDownloads()
 //minify.minJSON()

@@ -313,7 +313,7 @@ function initEvents(){
       $('head').append($('<link />', {
         id: "dark-mode",
         rel: "stylesheet",
-        href: "./app/css/dark.css"
+        href: "./app/css/dark.min.css"
       }))
     } else {
       $(this).text('brightness_high');
@@ -324,12 +324,16 @@ function initEvents(){
 
   if(!ls.get('brightness')){
     $('#brightness').text('brightness_2')
-    $('head').append($('<link />', {
-      id: "dark-mode",
-      rel: "stylesheet",
-      href: "./app/css/dark.css"
-    }))
+    $('head').append(
+      $('<link />', {
+        id: "dark-mode",
+        rel: "stylesheet",
+        href: "./app/css/dark.min.css"
+      })
+    )
   }
+
+  $('.modal').modal();
 
   if(!ls.get('transHis')){
     ls.set('transHis', [])
@@ -363,7 +367,6 @@ function initEvents(){
   })
 
   $('#src-translate').characterCounter();
-  $('.modal').modal();
 
   gettransHis();
 
@@ -372,6 +375,7 @@ function initEvents(){
 
   if(navigator.onLine) {
     isOnline();
+    addAnalytics();
   } else {
     isOffline();
   }
@@ -476,7 +480,7 @@ function initBody(){
     bcTpl(),
     floatTpl(),
     translateTpl(),
-    chatboxTpl()
+    chatboxTpl({name: ls.get('student').id || 'student'})
   ),
   $('.navL').append(navSTpl()),
   $('.navR').append(
@@ -562,4 +566,21 @@ function initChat(){
       cl('chat service error.')
     }
   });
+}
+
+function addAnalytics(){
+
+  $(document).on('yacounterXXXXXXinited', function () {
+    console.log('yaCounterXXXXXX tag is ready to use');
+  });
+
+  ym(55060708, "init", {
+    clickmap: true,
+    defer: true,
+    trackLinks: true,
+    accurateTrackBounce: true
+  });
+
+  ym(55060708, 'hit', location.href);
+
 }

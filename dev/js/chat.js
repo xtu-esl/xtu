@@ -1702,13 +1702,13 @@ $.getJSON("./app/data/config/chat.json", function(e) {
               departments: []
             },
             P = {
-              chat_sound: "https://static-v.tawk.to/a-v3/audio/chat_sound.mp3"
+              chat_sound: "./app/audio/chat_sound.mp3"
             },
             N = {
-              chat_sound: "https://static-v.tawk.to/a-v3/audio/chat_sound.ogg"
+              chat_sound: "./app/audio/chat_sound.ogg"
             },
             M = {
-              chat_sound: "https://static-v.tawk.to/a-v3/audio/chat_sound.wav"
+              chat_sound: "./app/audio/chat_sound.wav"
             };
           ! function() {
             var e = !1,
@@ -1967,20 +1967,6 @@ $.getJSON("./app/data/config/chat.json", function(e) {
             e.classList ? e.classList.add(t) : this.hasClass(e, t) || (e.className += " " + t)
           }, A.prototype.removeClass = function(e, t) {
             e.classList ? e.classList.remove(t) : this.hasClass(e, t) && (e.className = e.className.replace(RegExp("(\\s|^)" + t + "(\\s|$)"), " "))
-          }, A.prototype.updateFontStylesheet = function(e) {
-            if (e && (e !== document || H.isPopup)) {
-              var t = e.getElementById("lato-fonts"),
-                i = e.body;
-              L.supportsLatin(H.locale) && !t ? (e.querySelector("head").innerHTML += '<link id="lato-fonts" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&subset=latin-ext" rel="stylesheet"/>', this.addClass(i, "font-lato")) : !L.supportsLatin(H.locale) && t && (t.parentNode.removeChild(t), this.removeClass(i, "font-lato"))
-            }
-          }, A.prototype.updateFonts = function() {
-            if (p.viewHandler && p.viewHandler.iframeContainer && p.viewHandler.iframeContainer.childViews)
-              for (var e = p.viewHandler.iframeContainer.childViews, t = 0; t < e.length; t++) {
-                var i = e[t];
-                i.isIframe && this.updateFontStylesheet(i.documentRef)
-              }
-          }, A.prototype.supportsLatin = function(e) {
-            return -1 < "cat cs da de en et es fi fil fr hr hu id it lv lt ms nl no pl pt pt_br ro sk sl sr_cs sq sv tr vi".split(" ").indexOf(e)
           }, A.prototype.hasWebRTC = function() {
             return !C && (h.getUserMedia || h.webkitGetUserMedia || h.mozGetUserMedia || h.msGetUserMedia || h.mediaDevices && h.mediaDevices.getUserMedia)
           }, Inheritance_Manager = {
@@ -2754,7 +2740,7 @@ $.getJSON("./app/data/config/chat.json", function(e) {
             he.apply(this, arguments)
           };
           (pe.prototype = new he).constructor = pe, pe.prototype.parent = he.prototype, pe.prototype.buildIframe = function(e, t) {
-            this.documentRef = L.getDocument(this.elementReferrer), this.documentRef.open(), this.documentRef.writeln('<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /></head><body></body></html>'), this.documentRef.close(), t || L.updateFontStylesheet(this.documentRef), this.insertCssFile(e), this.insertContent(), this.buildChildViews()
+            this.documentRef = L.getDocument(this.elementReferrer), this.documentRef.open(), this.documentRef.writeln('<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /></head><body></body></html>'), this.documentRef.close(), t || this.insertCssFile(e), this.insertContent(), this.buildChildViews()
           }, pe.prototype.insertContent = function() {
             this.documentRef.body.innerHTML = this.template
           }, pe.prototype.buildChildViews = function() {
@@ -4715,7 +4701,7 @@ $.getJSON("./app/data/config/chat.json", function(e) {
           }, Ce.prototype.restyleEmbed = function() {
             var e = document.getElementById(l.embedded);
             if (this.wrapper.addClass("embedded"), (H.isPopup || H.isEmbedded) && (this.container.getElementById("popoutChat").outerHTML = ""), H.isEmbedded) return e ? p.viewHandler.onEmbeddedWindowResize() : void 0;
-            H.isPopup && (this.wrapper.addClass("popout"), L.updateFontStylesheet(document)), this.container.restyle("width", "100% !important"), this.container.restyle("height", "100% !important")
+            H.isPopup && (this.wrapper.addClass("popout")), this.container.restyle("width", "100% !important"), this.container.restyle("height", "100% !important")
           }, Ce.prototype.updateGreetings = function(e) {
             var t;
             this.container.elementReferrer && ((t = this.container.getElementById("file-upload-drop-label")) && (t.innerHTML = p.languageParser.translate("chat", "dragDropText")), (e = e || B.pageStatus()) && (t = this.container.getElementById("shortMessage"), this.setChatGreetings(), t && this.chatTextarea && (null !== (e = o.getShortMessage(e)) && (t.innerHTML = e, H.onlineGreeting && (e = L.rawDecode(H.onlineGreeting.actionMessage), S ? this.chatTextarea.elementReferrer.placeholder = e : (this.chatTextarea.elementReferrer.value = e, L.togglePlaceholderText(this.chatTextarea.elementReferrer, e, "chatTextarea")))))))
@@ -5673,7 +5659,7 @@ $.getJSON("./app/data/config/chat.json", function(e) {
                 textReplace: e.cf.btnRjct,
                 placeholder: "__CUSTOM_CLOSE_BUTTON__"
               }]
-            }, e.cf.plcyUrl && (H.consentOption.text += "\n[" + (e.cf.plcyUrlTxt || e.cf.plcyUrlTxt) + "](" + e.cf.plcyUrl + ")")), L.updateFonts())
+            }, e.cf.plcyUrl && (H.consentOption.text += "\n[" + (e.cf.plcyUrlTxt || e.cf.plcyUrlTxt) + "](" + e.cf.plcyUrl + ")")))
           }, We.prototype.processPrechatForm = function(e) {
             H.showPreChatForm = void 0 !== e.prechatForm && null !== e.prechatForm, H.showPreChatForm && (H.prechatOptions = e.prechatForm)
           }, We.prototype.processOfflineForm = function(e) {
@@ -5683,7 +5669,8 @@ $.getJSON("./app/data/config/chat.json", function(e) {
               fields: [{
                 label: p.languageParser.translate("form", "name"),
                 isRequired: !0,
-                type: "name"
+                type: "name",
+                value: "test"
               }, {
                 label: p.languageParser.translate("form", "email"),
                 isRequired: !0,
@@ -6369,7 +6356,7 @@ $.getJSON("./app/data/config/chat.json", function(e) {
             if (p && p.main && p.main.waitingForLanguage) {
               p.main.setupDone(!0);
               try {
-                p.eventEmitter.emit("localeChanged"), L.updateFonts()
+                p.eventEmitter.emit("localeChanged")
               } catch (e) {
                 a.handleError("Unable to emit locale changed", e.fileName, e.lineNumber, e.stack)
               }

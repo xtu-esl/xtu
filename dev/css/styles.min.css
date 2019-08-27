@@ -474,8 +474,10 @@ nav {
 }
 
 .sidenav-trigger{
-
+  font-size: 32px;
+  line-height: 52px;
 }
+
 .navLogo{
 font-size: 28px;
 font-weight:  500;
