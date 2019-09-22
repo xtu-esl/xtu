@@ -480,7 +480,7 @@ function initBody(){
     bcTpl(),
     floatTpl(),
     translateTpl(),
-    chatboxTpl({name: ls.get('student').id || 'student'})
+    chatboxTpl({name: 'student'})
   ),
   $('.navL').append(navSTpl()),
   $('.navR').append(

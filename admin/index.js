@@ -138,7 +138,7 @@ const minify = {
 
 
 //minify.minCSS()
-//minify.minJS();
+minify.minJS();
 //minify.gzipAudio()
 //minify.minHTML()
 //minify.gzipDownloads()
