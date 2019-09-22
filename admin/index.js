@@ -115,13 +115,11 @@ const minify = {
     })
   },
   gzipAudio: function(){
-
     glob("./app/audio/**/*.*", function (err, items) {
       _.forEach(items, function(e){
         gz(e);
       })
     })
-
   },
   minJSON: function(){
     glob("./app/**/*.json", function (err, items) {
