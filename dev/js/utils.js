@@ -567,7 +567,7 @@ function initChat(){
     }
   });
 }
-
+/*
 function addAnalytics(){
 
   $(document).on('yacounterXXXXXXinited', function () {
@@ -584,3 +584,4 @@ function addAnalytics(){
   ym(55060708, 'hit', location.href);
 
 }
+*/
